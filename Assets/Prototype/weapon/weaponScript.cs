@@ -46,6 +46,9 @@ public class weaponScript : MonoBehaviour
         {
             isReloading = false;
         }
+
+
+
     }
 
     void Shoot()
