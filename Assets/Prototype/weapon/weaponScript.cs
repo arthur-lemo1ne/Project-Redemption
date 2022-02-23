@@ -50,6 +50,10 @@ public class weaponScript : MonoBehaviour
 
     void Shoot()
     {
+        if(BulletsLeft == 1)
+        {
+            Anim.SetBool("Empty", true);
+        }
         Anim.SetTrigger("Shoot");
         MuzzleFlash.Play();
         RaycastHit hit;
@@ -62,6 +66,8 @@ public class weaponScript : MonoBehaviour
 
     void Reload()
     {
+        Anim.SetBool("Empty", false);
+
         BulletsLeft = magSize;
         
     }
