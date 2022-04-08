@@ -58,14 +58,15 @@ public class Player_Mouvement : MonoBehaviour
 
         if (isGrounded)
         {
-            if (!isRunning)
-            {
-                controller.Move(move * sp * Time.deltaTime);
-            }
-            else
-            {
-                controller.Move(move * sp * Time.deltaTime);
-            }
+
+            controller.Move(move * sp * Time.deltaTime);
+           
+        }
+        else
+        {
+
+            controller.Move(move * sp / 2 * Time.deltaTime);
+
         }
         
 
